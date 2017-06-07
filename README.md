@@ -1,12 +1,10 @@
 ### Stack utilizada
 
-angular
-bower
-bootstrap
-angular-slick para o carrossel de produtos
+angular, bower,bootstrap e angular-slick para o carrossel de produtos.
 
 ### Como rodar o projeto
 
+- Ter o Node.js instalado na máquina
 
 ```
 npm start
