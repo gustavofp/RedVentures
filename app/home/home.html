@@ -1,0 +1,66 @@
+<section id="banner-home">
+  <img src="images/banner.png" alt="Banner" class="img img-responsive" />
+</section>
+<div class="container">
+  <div class="produtos">
+    <div class="produtos-header">
+        <p>Chuteiras HyperVenom:</p>
+        <form class="form-filters">
+          <label class="checkbox-inline">
+            <input type="checkbox">Cano Alto
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox">Cano Baixo
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox">Futebol Campo
+          </label>
+          <label class="checkbox-inline">
+            <input type="checkbox">Futebol Society
+          </label>
+        </form>
+        <button class="btn btn-produtos pull-right">TODOS OS PRODUTOS</button>
+        <hr>
+    </div>
+    <div class="produtos-list">
+        <p>Mais vendidos</p>
+        <slick dots="true" init-onload=false lazy-load='ondemand' data="arrayFiltrado" arrows="false" slides-to-show="4" slides-to-scroll="4">
+          <div class="col-md-3 col-sm-6 produto-box" ng-repeat="produto in arrayFiltrado.best | filter:filtroProdutos" ng-mouseenter="options=true" ng-mouseleave="options=false">
+            <img src="{{produto.image}}" alt="{{produto.title}}" class="img img-responsive produto-thumb" />
+            <p class="personalize">PERSONALIZE</p>
+            <p class="titulo">{{ produto.title }}</p>
+            <p>
+              <span class="categoria" ng-show="produto.highTop == true">Cano Alto</span>
+              <span class="categoria" ng-show="produto.highTop == false">Cano Baixo</span>
+              <span class="preco">{{ produto.price | currency:"R$ " }}</span>
+              <span class="parcelamento">ou {{ produto.installments.number }} X de {{ produto.installments.value | currency:"R$ " }} sem juros</span>
+            </p>
+            <button ng-show="options" class="btn btn-comprar">COMPRAR</button>
+          </div>
+        </slick>
+    </div>
+    <div class="produtos-list ">
+        <p>Lançamentos</p>
+        <slick dots="true" init-onload=false lazy-load='ondemand' data="arrayFiltrado" arrows="false" slides-to-show="4" slides-to-scroll="4">
+          <div class="col-md-3 col-sm-6 produto-box" ng-repeat="produto in arrayFiltrado.releases  | filter:filtroProdutos" ng-mouseenter="options=true" ng-mouseleave="options=false">
+            <img src="{{produto.image}}" alt="{{produto.title}}" class="img img-responsive produto-thumb" />
+            <p class="personalize">PERSONALIZE</p>
+            <p class="titulo">{{ produto.title }}</p>
+            <p>
+              <span class="categoria" ng-show="produto.highTop == true">Cano Alto</span>
+              <span class="categoria" ng-show="produto.highTop == false">Cano Baixo</span>
+              <span class="preco">{{ produto.price | currency:"R$ " }}</span>
+              <span class="parcelamento">ou {{ produto.installments.number }} X de {{ produto.installments.value | currency:"R$ " }} sem juros</span>
+            </p>
+            <button ng-show="options" class="btn btn-comprar">COMPRAR</button>
+          </div>
+        </slick>
+    </div>
+  </div>
+</div>
+<div class="banner-inferior">
+  <div class="banner-conteudo">
+    <h2>JUST DO IT.</h2>
+    <button class="btn btn-produtos">TODOS OS PRODUTOS</button>
+  </div>
+</div>

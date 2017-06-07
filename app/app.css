@@ -1,0 +1,126 @@
+/* app css stylesheet */
+body {
+  font-family: 'Tahoma';
+}
+
+.navbar {
+  background-color: white;
+  border: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: black;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
+.produtos {
+  margin: 25px 0px 25px 0px;
+}
+
+.produtos-header p {
+  font-weight: bolder;
+  display: inline-block;
+}
+
+.produtos-header hr {
+  display: block;
+  border-color: #CDCDCD;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-width: 1px;
+}
+
+.produtos-header .form-filters {
+  margin-left: 15px;
+  display: inline-block;
+}
+
+.produtos-header .form-filters label {
+  color: grey;
+}
+
+.produtos-list {
+  margin: 25px 0px 70px 0px;
+}
+
+.produtos-list .produto-box {
+   padding: 10px 30px 10px 30px;
+}
+
+.produtos-list span {
+  color: grey;
+  display: block;
+}
+
+.produtos-list p {
+  font-weight: bolder;
+  display: block;
+}
+
+.produtos-list .titulo {
+  color: black;
+}
+
+.produtos-list .personalize {
+  font-size: 12px;
+}
+.produtos-list .personalize::before {
+  margin-right: 5px;
+  content: url('images/personalize.jpg');
+}
+
+.produtos-list .categoria {
+  font-weight: lighter;
+}
+
+.produtos-list .parcelamento {
+  font-weight: lighter;
+}
+
+.produtos-list .btn-comprar {
+  width: 90%;
+  color: white;
+  background-color: #FF5C2B;
+}
+
+.produto-box{
+  height: 386px;
+  border: 0.1em solid white;
+}
+
+.produto-box:hover{
+  border: 0.1em solid #CDCDCD;
+}
+
+.slick-prev:before, .slick-next:before {
+    color: grey;
+}
+
+.btn-produtos {
+  background-color: #333333;
+  color: white;
+  padding: 10px;
+}
+
+.banner-inferior {
+  background-image: url('images/banner-inferior.png');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 565px;
+  text-align: center;
+}
+
+.banner-inferior .banner-conteudo {
+  display: inline-block;
+  margin-top: 15%;
+}
+
+.banner-inferior h2{
+  font-size: 75px;
+  color: white;
+  font-weight: bolder;
+}
